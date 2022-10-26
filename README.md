@@ -14,7 +14,7 @@ composer require scouser03/nova4-multiselect
 namespace App\Nova;
 
 use Spatie\TagsField\Tags;
-use Scouser03\Nova4MultiSelect\Nova4MultiSelect;
+use Scouser03\Nova4Multiselect\Nova4Multiselect;
 
 class BlogPost extends Resource
 {
@@ -25,14 +25,14 @@ class BlogPost extends Resource
         return [
             // ...
 
-            Nova4MultiSelect::make('select name with model', 'tags') //tags is relation name
+            Nova4Multiselect::make('select name with model', 'tags') //tags is relation name
                 ->table('post_tag') //Relation table
                 ->inputId('uuid') //Sets the id of the input element. default - id
                 ->label('tag') // What key to use when generating option labels when each option is an object, default - name
                 ->indexUpdateable(true) //when attach new tag to index resource
                 ->model(Tag::class), //get all data with model
 
-            Nova4MultiSelect::make('select name with query', 'tags')
+            Nova4Multiselect::make('select name with query', 'tags')
                 ->table('post_tag')
                 ->label('tag')
                 ->query(Tag::query()->take(3)->get()), //pass collection data

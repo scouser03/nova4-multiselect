@@ -7,6 +7,7 @@
     >
         <template #field>
             <multiselect
+                :disabled="field.readonly"
                 :options="options"
                 :multiple="true"
                 :label="label"

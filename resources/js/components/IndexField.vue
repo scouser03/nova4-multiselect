@@ -9,7 +9,11 @@
         >
         </Modal>
         <button
-            v-if="select == false && field.indexUpdateable"
+            v-if="
+                select == false &&
+                field.indexUpdateable &&
+                field.readonly == false
+            "
             @click="editHandler"
             class="inline-flex cursor-pointer text-70 hover:text-primary mr-2"
         >
@@ -59,7 +63,7 @@
                 class="multi-select-field-container relative w-fit px-2 py-1 rounded-lg flex space-x-2 items-center mr-2"
             >
                 <span class="relative btn text-white">{{ item[name] }}</span>
-                <div class="flex items-center">
+                <div v-if="field.readonly == false" class="flex items-center">
                     <svg
                         @click="removeConfirm(item)"
                         xmlns="http://www.w3.org/2000/svg"

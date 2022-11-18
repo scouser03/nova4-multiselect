@@ -65,3 +65,17 @@ export default {
     },
 };
 </script>
+
+<style>
+.multiselect__tag {
+    background: rgb(64, 153, 222) !important;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.multiselect__tag-icon:hover {
+    background: rgb(17, 91, 147) !important;
+}
+.multiselect__option--highlight {
+    background: rgb(64, 153, 222) !important;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+</style>

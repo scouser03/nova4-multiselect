@@ -54,7 +54,7 @@
             v-show="!select"
             v-if="data.length"
             style="max-width: 325px"
-            class="flex items-center space-2 w-56 overflow-x-scroll"
+            class="flex items-center space-2 w-56 overflow-x-auto"
         >
             <div
                 v-for="item in data"

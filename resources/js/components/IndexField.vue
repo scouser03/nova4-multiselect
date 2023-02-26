@@ -59,20 +59,20 @@
             <div
                 v-for="item in data"
                 :key="item.id"
-                class="bg-primary-500 multi-select-field-container relative w-fit px-2 py-1 rounded-lg flex space-x-2 items-center mr-1 mb-1"
+                class="bg-primary-500 multi-select-field-container relative w-fit px-1 py-1 rounded-lg flex items-center mr-1 mb-1"
             >
                 <span
-                    class="relative btn text-white dark:text-gray-800 font-bold"
+                    class="relative btn text-white dark:text-gray-800 font-xs"
                     >{{ item[name] }}</span
                 >
                 <div
                     v-if="field.readonly == false"
-                    class="flex items-center dark:text-gray-800 font-bold"
+                    class="flex items-center dark:text-gray-800 font-xs font-bold"
                 >
                     <svg
                         @click="removeConfirm(item)"
                         xmlns="http://www.w3.org/2000/svg"
-                        class="h-4 w-4 ml-2 font-bold cursor-pointer hover:text-white"
+                        class="h-4 w-4 ml-1 font-bold cursor-pointer hover:text-white"
                         viewBox="0 0 20 20"
                         fill="currentColor"
                     >

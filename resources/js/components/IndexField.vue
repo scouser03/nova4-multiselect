@@ -53,8 +53,8 @@
         <div
             v-show="!select"
             v-if="data.length"
-            :style="`max-height: ${maxHeight}px;`"
-            class="flex items-center flex-wrap overflow-y-auto h-56"
+            :style="`max-height: ${maxHeight}px; width: ${width}px;`"
+            class="flex items-center flex-wrap overflow-y-auto h-56 max-w-56"
         >
             <div
                 v-for="item in data"
@@ -123,6 +123,7 @@ export default {
     data() {
         return {
             maxHeight: this.field.maxHeight,
+            width: this.field.width,
             select: false,
             data: this.field.value,
             name: this.field.label,

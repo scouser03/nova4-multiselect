@@ -23,6 +23,8 @@ class Nova4Multiselect extends Field
         $this->inputId();
 
         $this->maxHeight();
+
+        $this->width();
     }
 
 
@@ -60,6 +62,11 @@ class Nova4Multiselect extends Field
     public function maxHeight($number = 60)
     {
         return $this->withMeta(['maxHeight' => $number]);
+    }
+
+    public function width($number = 300)
+    {
+        return $this->withMeta(['width' => $number]);
     }
 
     protected function fillAttributeFromRequest(NovaRequest $request, $requestAttribute, $model, $attribute)

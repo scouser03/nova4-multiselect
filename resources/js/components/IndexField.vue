@@ -53,17 +53,22 @@
         <div
             v-show="!select"
             v-if="data.length"
-            style="max-width: 325px"
-            class="flex items-center space-2 w-56 overflow-x-auto"
+            :style="`max-height: ${maxHeight}px;`"
+            class="flex items-center flex-wrap overflow-y-auto h-56"
         >
             <div
                 v-for="item in data"
                 :key="item.id"
-                style="background-color: #4099de"
-                class="multi-select-field-container relative w-fit px-2 py-1 rounded-lg flex space-x-2 items-center mr-2"
+                class="bg-primary-500 multi-select-field-container relative w-fit px-2 py-1 rounded-lg flex space-x-2 items-center mr-1 mb-1"
             >
-                <span class="relative btn text-white">{{ item[name] }}</span>
-                <div v-if="field.readonly == false" class="flex items-center">
+                <span
+                    class="relative btn text-white dark:text-gray-800 font-bold"
+                    >{{ item[name] }}</span
+                >
+                <div
+                    v-if="field.readonly == false"
+                    class="flex items-center dark:text-gray-800 font-bold"
+                >
                     <svg
                         @click="removeConfirm(item)"
                         xmlns="http://www.w3.org/2000/svg"
@@ -117,6 +122,7 @@ export default {
     components: { Multiselect, Modal },
     data() {
         return {
+            maxHeight: this.field.maxHeight,
             select: false,
             data: this.field.value,
             name: this.field.label,

@@ -66,7 +66,7 @@ export default {
 };
 </script>
 
-<style>
+<!-- <style>
 .multiselect__tag {
     background: rgb(64, 153, 222) !important;
     color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -78,4 +78,4 @@ export default {
     background: rgb(64, 153, 222) !important;
     color: rgb(255 255 255 / var(--tw-text-opacity));
 }
-</style>
+</style> -->

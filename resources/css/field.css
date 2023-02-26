@@ -1,1 +1,52 @@
 /* Nova Field CSS */
+.multiselect__tag {
+    background-color: rgba(var(--colors-primary-500)) !important;
+    color: #fff !important;
+}
+.multiselect__tag-icon:hover {
+    background-color: rgba(var(--colors-primary-400)) !important;
+}
+.multiselect__option--highlight {
+    background-color: rgba(var(--colors-primary-500)) !important;
+    color: #fff !important;
+}
+
+.dark .multiselect__tag {
+    color: rgba(var(--colors-gray-900)) !important;
+    font-weight: 700 !important;
+}
+
+.dark .multiselect__tags,
+.dark .multiselect__tags-wrap,
+.dark .multiselect__input,
+.dark .multiselect__single {
+    background-color: rgba(var(--colors-gray-900)) !important;
+    color: rgba(var(--colors-gray-900)) !important;
+    font-weight: 700 !important;
+    border: rgba(var(--colors-gray-700)) !important;
+}
+
+.dark .multiselect__input,
+.dark .multiselect__spinner,
+.dark .multiselect__element,
+.dark .multiselect__input:focus {
+    color: rgba(var(--colors-gray-400)) !important;
+    font-weight: 700 !important;
+}
+.dark .multiselect__option {
+    background-color: rgba(var(--colors-gray-900)) !important;
+    color: rgba(var(--colors-gray-400)) !important;
+    font-weight: 700 !important;
+}
+
+.dark .multiselect__element:hover {
+    background-color: rgba(var(--colors-red-700)) !important;
+}
+
+.dark .multiselect__option--highlight {
+    background-color: rgba(var(--colors-gray-700)) !important;
+    color: #fff !important;
+}
+.dark .multiselect__content-wrapper {
+    border: rgba(var(--colors-gray-700)) !important;
+}

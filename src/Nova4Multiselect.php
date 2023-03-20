@@ -59,6 +59,15 @@ class Nova4Multiselect extends Field
         return $this->withMeta(['inputId' => $id]);
     }
 
+    public function mainTable($table, $id)
+    {
+        return $this->withMeta([
+            'mainTable' => [
+                'table' => $table,
+                'id' => $id,
+            ],
+        ]);
+    }
     public function maxHeight($number = 60)
     {
         return $this->withMeta(['maxHeight' => $number]);
@@ -80,5 +89,6 @@ class Nova4Multiselect extends Field
         $class::saved(function ($model) use ($tagNames, $attribute) {
             $model->$attribute()->sync($tagNames);
         });
+        
     }
 }

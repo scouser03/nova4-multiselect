@@ -27,9 +27,14 @@ class MultiSelectController extends Controller
 
     public function destroy(Request $request)
     {
+        
         DB::table($request->get('table'))
             ->where($request->get('field'))
             ->delete();
+        
+        if($mainTable = $request->get('mainTable')){
+            DB::table($mainTable['table'])->where('id', data_get($request->get('field'), $mainTable['id']))->update(['updated_at' => now()]);
+        } 
         
         return response()->json([
             'success' => true

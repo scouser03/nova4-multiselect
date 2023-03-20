@@ -60,7 +60,8 @@ export default {
         remove(item){
             Nova.request().post('/nova-vendor/scouser03/nova4-multiselect/delete', {
                 table: this.field.table,
-                field: item.pivot
+                field: item.pivot,
+                mainTable: this.field.mainTable,
             }).then(response => {
                 this.data = this.data.filter((mapItem) => mapItem !== item);
                 Nova.success(`${item[this.label]} has been detached`);
